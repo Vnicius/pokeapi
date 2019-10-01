@@ -31,6 +31,8 @@ module Pokeapi
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    
+    config.eager_load_paths << Rails.root.join('lib')
 
     config.start_url = "https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number"
     config.base_url = "https://bulbapedia.bulbagarden.net"
