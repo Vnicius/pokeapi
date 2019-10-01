@@ -21,7 +21,7 @@ module Api::V1
             if params[:q].nil?
                 render json: {status: "ERROR", data: {} }, status: :bad_request
             else
-                pk = Pokemon.all.select { |i| i.name.downcase.include?(params[:q].downcase) }
+                pk = Pokemon.search(params[:q])
                 render json: {status: "SUCCESS", data: pk }, status: :ok
             end
         end
