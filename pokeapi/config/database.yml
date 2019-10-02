@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  timeout: 500
+  pool: 5
+  username: root
+  password: root
+  
+development:
+  <<: *default
+  database: pokeapi_development
+
+test:
+  <<: *default
+  database: pokeapi_test
+
+production:
+  <<: *default
+  database: pokeapi_production
