@@ -1,5 +1,5 @@
 
-namespace :scrapper do
+namespace :scraper do
 
     desc "Scrap the Pokémons from Bulbapedia"
     task pokemons: :environment do
